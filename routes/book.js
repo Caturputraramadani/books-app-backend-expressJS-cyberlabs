@@ -5,9 +5,14 @@ const{
     addBook, 
     getBook,
     updateBook,
-    deleteBook
+    deleteBook,
+    search,
+    sortBy
 
 } = require('../controller/BookController')
+
+router.get('/search', search)
+router.get('/sort', sortBy)
 
 router.get('/', getBooks)
 router.post('/', addBook)
